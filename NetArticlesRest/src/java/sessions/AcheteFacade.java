@@ -27,15 +27,9 @@ public class AcheteFacade {
         return this.em;
     }
 
-    /**
-     * Liste des catégories
-     *
-     * @return : Collection de Categorie
-     * @throws Exception
-     */
     public List<Achete> lister() throws Exception {
         try {
-            return (em.createNamedQuery("Categorie.findAll").getResultList());
+            return (em.createNamedQuery("Achete.findAll").getResultList());
         } catch (Exception e) {
             throw e;
         }
