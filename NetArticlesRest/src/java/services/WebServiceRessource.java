@@ -33,7 +33,7 @@ import sessions.DomaineFacade;
  *
  * @author Epulapp
  */
-@Path("webservice")
+@Path("webService")
 public class WebServiceRessource {
 
     @EJB

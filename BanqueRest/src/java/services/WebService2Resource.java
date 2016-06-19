@@ -26,7 +26,7 @@ import sessions.CompteFacade;
  * @author Epulapp
  */
 @Path("webService")
-public class WebServiceResource {
+public class WebService2Resource {
 
     @EJB
     private CompteFacade compteF;
@@ -34,11 +34,11 @@ public class WebServiceResource {
     /**
      * Creates a new instance of WebServiceResource
      */
-    public WebServiceResource() {
+    public WebService2Resource() {
     }
 
     /**
-     * Retrieves representation of an instance of services.WebServiceResource
+     * Retrieves representation of an instance of services.WebService2Resource
      *
      * @return an instance of java.lang.String
      */
@@ -50,7 +50,7 @@ public class WebServiceResource {
     }
 
     /**
-     * PUT method for updating or creating an instance of WebServiceResource
+     * PUT method for updating or creating an instance of WebService2Resource
      *
      * @param content representation for the resource
      */
