@@ -74,88 +74,172 @@ public class Article implements Serializable {
     @ManyToOne(optional = false)
     private Domaine domaine;
 
+    /**
+     *
+     */
     public Article() {
     }
 
+    /**
+     *
+     * @param idArticle
+     */
     public Article(Integer idArticle) {
         this.idArticle = idArticle;
     }
 
+    /**
+     *
+     * @param idArticle
+     * @param fichier
+     */
     public Article(Integer idArticle, String fichier) {
         this.idArticle = idArticle;
         this.fichier = fichier;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getIdArticle() {
         return idArticle;
     }
 
+    /**
+     *
+     * @param idArticle
+     */
     public void setIdArticle(Integer idArticle) {
         this.idArticle = idArticle;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getTitre() {
         return titre;
     }
 
+    /**
+     *
+     * @param titre
+     */
     public void setTitre(String titre) {
         this.titre = titre;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getResume() {
         return resume;
     }
 
+    /**
+     *
+     * @param resume
+     */
     public void setResume(String resume) {
         this.resume = resume;
     }
 
+    /**
+     *
+     * @return
+     */
     public BigDecimal getPrix() {
         return prix;
     }
 
+    /**
+     *
+     * @param prix
+     */
     public void setPrix(BigDecimal prix) {
         this.prix = prix;
     }
 
+    /**
+     *
+     * @return
+     */
     public Date getDateArticle() {
         return dateArticle;
     }
 
+    /**
+     *
+     * @param dateArticle
+     */
     public void setDateArticle(Date dateArticle) {
         this.dateArticle = dateArticle;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getFichier() {
         return fichier;
     }
 
+    /**
+     *
+     * @param fichier
+     */
     public void setFichier(String fichier) {
         this.fichier = fichier;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlTransient
     public List<Redige> getRedigeList() {
         return redigeList;
     }
 
+    /**
+     *
+     * @param redigeList
+     */
     public void setRedigeList(List<Redige> redigeList) {
         this.redigeList = redigeList;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlTransient
     public List<Achete> getAcheteList() {
         return acheteList;
     }
 
+    /**
+     *
+     * @param acheteList
+     */
     public void setAcheteList(List<Achete> acheteList) {
         this.acheteList = acheteList;
     }
 
+    /**
+     *
+     * @return
+     */
     public Domaine getDomaine() {
         return domaine;
     }
 
+    /**
+     *
+     * @param domaine
+     */
     public void setDomaine(Domaine domaine) {
         this.domaine = domaine;
     }

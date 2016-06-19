@@ -30,26 +30,50 @@ public class DroitsPK implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dateTrimestre;
 
+    /**
+     *
+     */
     public DroitsPK() {
     }
 
+    /**
+     *
+     * @param idAuteur
+     * @param dateTrimestre
+     */
     public DroitsPK(int idAuteur, Date dateTrimestre) {
         this.idAuteur = idAuteur;
         this.dateTrimestre = dateTrimestre;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getIdAuteur() {
         return idAuteur;
     }
 
+    /**
+     *
+     * @param idAuteur
+     */
     public void setIdAuteur(int idAuteur) {
         this.idAuteur = idAuteur;
     }
 
+    /**
+     *
+     * @return
+     */
     public Date getDateTrimestre() {
         return dateTrimestre;
     }
 
+    /**
+     *
+     * @param dateTrimestre
+     */
     public void setDateTrimestre(Date dateTrimestre) {
         this.dateTrimestre = dateTrimestre;
     }

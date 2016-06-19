@@ -37,25 +37,48 @@ public class Compte implements Serializable {
     @Column(name = "solde")
     private Integer solde;
 
+    /**
+     *
+     */
     public Compte() {
     }
 
+    /**
+     *
+     * @param idCompte
+     */
     public Compte(Integer idCompte) {
         this.idCompte = idCompte;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getIdCompte() {
         return idCompte;
     }
 
+    /**
+     *
+     * @param idCompte
+     */
     public void setIdCompte(Integer idCompte) {
         this.idCompte = idCompte;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getSolde() {
         return solde;
     }
 
+    /**
+     *
+     * @param solde
+     */
     public void setSolde(Integer solde) {
         this.solde = solde;
     }

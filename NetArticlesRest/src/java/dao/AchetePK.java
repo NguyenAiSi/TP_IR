@@ -26,26 +26,50 @@ public class AchetePK implements Serializable {
     @Column(name = "id_article")
     private int idArticle;
 
+    /**
+     *
+     */
     public AchetePK() {
     }
 
+    /**
+     *
+     * @param idClient
+     * @param idArticle
+     */
     public AchetePK(int idClient, int idArticle) {
         this.idClient = idClient;
         this.idArticle = idArticle;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getIdClient() {
         return idClient;
     }
 
+    /**
+     *
+     * @param idClient
+     */
     public void setIdClient(int idClient) {
         this.idClient = idClient;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getIdArticle() {
         return idArticle;
     }
 
+    /**
+     *
+     * @param idArticle
+     */
     public void setIdArticle(int idArticle) {
         this.idArticle = idArticle;
     }

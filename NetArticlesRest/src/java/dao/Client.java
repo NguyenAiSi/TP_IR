@@ -69,80 +69,157 @@ public class Client implements Serializable {
     @ManyToOne(optional = false)
     private Categorie categorie;
 
+    /**
+     *
+     */
     public Client() {
     }
 
+    /**
+     *
+     * @param idClient
+     */
     public Client(Integer idClient) {
         this.idClient = idClient;
     }
 
+    /**
+     *
+     * @param idClient
+     * @param loginClient
+     * @param pwdClient
+     */
     public Client(Integer idClient, String loginClient, String pwdClient) {
         this.idClient = idClient;
         this.loginClient = loginClient;
         this.pwdClient = pwdClient;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getIdClient() {
         return idClient;
     }
 
+    /**
+     *
+     * @param idClient
+     */
     public void setIdClient(Integer idClient) {
         this.idClient = idClient;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getIdentiteClient() {
         return identiteClient;
     }
 
+    /**
+     *
+     * @param identiteClient
+     */
     public void setIdentiteClient(String identiteClient) {
         this.identiteClient = identiteClient;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getAdresseClient() {
         return adresseClient;
     }
 
+    /**
+     *
+     * @param adresseClient
+     */
     public void setAdresseClient(String adresseClient) {
         this.adresseClient = adresseClient;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getCredits() {
         return credits;
     }
 
+    /**
+     *
+     * @param credits
+     */
     public void setCredits(Integer credits) {
         this.credits = credits;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLoginClient() {
         return loginClient;
     }
 
+    /**
+     *
+     * @param loginClient
+     */
     public void setLoginClient(String loginClient) {
         this.loginClient = loginClient;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getPwdClient() {
         return pwdClient;
     }
 
+    /**
+     *
+     * @param pwdClient
+     */
     public void setPwdClient(String pwdClient) {
         this.pwdClient = pwdClient;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlTransient
     public List<Achete> getAcheteList() {
         return acheteList;
     }
 
+    /**
+     *
+     * @param acheteList
+     */
     public void setAcheteList(List<Achete> acheteList) {
         this.acheteList = acheteList;
     }
 
+    /**
+     *
+     * @return
+     */
     public Categorie getCategorie() {
         return categorie;
     }
 
+    /**
+     *
+     * @param categorie
+     */
     public void setCategorie(Categorie categorie) {
         this.categorie = categorie;
     }

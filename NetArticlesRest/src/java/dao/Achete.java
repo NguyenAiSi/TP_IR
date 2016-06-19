@@ -33,6 +33,10 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Achete.findByDateAchat", query = "SELECT a FROM Achete a WHERE a.dateAchat = :dateAchat")})
 public class Achete implements Serializable {
     private static final long serialVersionUID = 1L;
+
+    /**
+     *
+     */
     @EmbeddedId
     protected AchetePK achetePK;
     @Column(name = "date_achat")
@@ -45,45 +49,89 @@ public class Achete implements Serializable {
     @ManyToOne(optional = false)
     private Client client;
 
+    /**
+     *
+     */
     public Achete() {
     }
 
+    /**
+     *
+     * @param achetePK
+     */
     public Achete(AchetePK achetePK) {
         this.achetePK = achetePK;
     }
 
+    /**
+     *
+     * @param idClient
+     * @param idArticle
+     */
     public Achete(int idClient, int idArticle) {
         this.achetePK = new AchetePK(idClient, idArticle);
     }
 
+    /**
+     *
+     * @return
+     */
     public AchetePK getAchetePK() {
         return achetePK;
     }
 
+    /**
+     *
+     * @param achetePK
+     */
     public void setAchetePK(AchetePK achetePK) {
         this.achetePK = achetePK;
     }
 
+    /**
+     *
+     * @return
+     */
     public Date getDateAchat() {
         return dateAchat;
     }
 
+    /**
+     *
+     * @param dateAchat
+     */
     public void setDateAchat(Date dateAchat) {
         this.dateAchat = dateAchat;
     }
 
+    /**
+     *
+     * @return
+     */
     public Article getArticle() {
         return article;
     }
 
+    /**
+     *
+     * @param article
+     */
     public void setArticle(Article article) {
         this.article = article;
     }
 
+    /**
+     *
+     * @return
+     */
     public Client getClient() {
         return client;
     }
 
+    /**
+     *
+     * @param client
+     */
     public void setClient(Client client) {
         this.client = client;
     }

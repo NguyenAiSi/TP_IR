@@ -45,34 +45,65 @@ public class Domaine implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "domaine")
     private List<Article> articleList;
 
+    /**
+     *
+     */
     public Domaine() {
     }
 
+    /**
+     *
+     * @param idDomaine
+     */
     public Domaine(Integer idDomaine) {
         this.idDomaine = idDomaine;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getIdDomaine() {
         return idDomaine;
     }
 
+    /**
+     *
+     * @param idDomaine
+     */
     public void setIdDomaine(Integer idDomaine) {
         this.idDomaine = idDomaine;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLibdomaine() {
         return libdomaine;
     }
 
+    /**
+     *
+     * @param libdomaine
+     */
     public void setLibdomaine(String libdomaine) {
         this.libdomaine = libdomaine;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlTransient
     public List<Article> getArticleList() {
         return articleList;
     }
 
+    /**
+     *
+     * @param articleList
+     */
     public void setArticleList(List<Article> articleList) {
         this.articleList = articleList;
     }

@@ -26,26 +26,50 @@ public class RedigePK implements Serializable {
     @Column(name = "id_auteur")
     private int idAuteur;
 
+    /**
+     *
+     */
     public RedigePK() {
     }
 
+    /**
+     *
+     * @param idArticle
+     * @param idAuteur
+     */
     public RedigePK(int idArticle, int idAuteur) {
         this.idArticle = idArticle;
         this.idAuteur = idAuteur;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getIdArticle() {
         return idArticle;
     }
 
+    /**
+     *
+     * @param idArticle
+     */
     public void setIdArticle(int idArticle) {
         this.idArticle = idArticle;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getIdAuteur() {
         return idAuteur;
     }
 
+    /**
+     *
+     * @param idAuteur
+     */
     public void setIdAuteur(int idAuteur) {
         this.idAuteur = idAuteur;
     }

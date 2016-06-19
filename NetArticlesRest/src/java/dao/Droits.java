@@ -35,6 +35,10 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Droits.findByMontantsDroits", query = "SELECT d FROM Droits d WHERE d.montantsDroits = :montantsDroits")})
 public class Droits implements Serializable {
     private static final long serialVersionUID = 1L;
+
+    /**
+     *
+     */
     @EmbeddedId
     protected DroitsPK droitsPK;
     @Basic(optional = false)
@@ -48,50 +52,99 @@ public class Droits implements Serializable {
     @ManyToOne(optional = false)
     private Auteur auteur;
 
+    /**
+     *
+     */
     public Droits() {
     }
 
+    /**
+     *
+     * @param droitsPK
+     */
     public Droits(DroitsPK droitsPK) {
         this.droitsPK = droitsPK;
     }
 
+    /**
+     *
+     * @param droitsPK
+     * @param etatDroits
+     */
     public Droits(DroitsPK droitsPK, Character etatDroits) {
         this.droitsPK = droitsPK;
         this.etatDroits = etatDroits;
     }
 
+    /**
+     *
+     * @param idAuteur
+     * @param dateTrimestre
+     */
     public Droits(int idAuteur, Date dateTrimestre) {
         this.droitsPK = new DroitsPK(idAuteur, dateTrimestre);
     }
 
+    /**
+     *
+     * @return
+     */
     public DroitsPK getDroitsPK() {
         return droitsPK;
     }
 
+    /**
+     *
+     * @param droitsPK
+     */
     public void setDroitsPK(DroitsPK droitsPK) {
         this.droitsPK = droitsPK;
     }
 
+    /**
+     *
+     * @return
+     */
     public Character getEtatDroits() {
         return etatDroits;
     }
 
+    /**
+     *
+     * @param etatDroits
+     */
     public void setEtatDroits(Character etatDroits) {
         this.etatDroits = etatDroits;
     }
 
+    /**
+     *
+     * @return
+     */
     public BigDecimal getMontantsDroits() {
         return montantsDroits;
     }
 
+    /**
+     *
+     * @param montantsDroits
+     */
     public void setMontantsDroits(BigDecimal montantsDroits) {
         this.montantsDroits = montantsDroits;
     }
 
+    /**
+     *
+     * @return
+     */
     public Auteur getAuteur() {
         return auteur;
     }
 
+    /**
+     *
+     * @param auteur
+     */
     public void setAuteur(Auteur auteur) {
         this.auteur = auteur;
     }

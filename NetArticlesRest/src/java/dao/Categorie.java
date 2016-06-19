@@ -45,34 +45,65 @@ public class Categorie implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "categorie")
     private List<Client> clientList;
 
+    /**
+     *
+     */
     public Categorie() {
     }
 
+    /**
+     *
+     * @param idCategorie
+     */
     public Categorie(Integer idCategorie) {
         this.idCategorie = idCategorie;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getIdCategorie() {
         return idCategorie;
     }
 
+    /**
+     *
+     * @param idCategorie
+     */
     public void setIdCategorie(Integer idCategorie) {
         this.idCategorie = idCategorie;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLibcategorie() {
         return libcategorie;
     }
 
+    /**
+     *
+     * @param libcategorie
+     */
     public void setLibcategorie(String libcategorie) {
         this.libcategorie = libcategorie;
     }
 
+    /**
+     *
+     * @return
+     */
     @XmlTransient
     public List<Client> getClientList() {
         return clientList;
     }
 
+    /**
+     *
+     * @param clientList
+     */
     public void setClientList(List<Client> clientList) {
         this.clientList = clientList;
     }

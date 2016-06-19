@@ -43,33 +43,64 @@ public class Cles implements Serializable {
     @Column(name = "lib_cle")
     private String libCle;
 
+    /**
+     *
+     */
     public Cles() {
     }
 
+    /**
+     *
+     * @param idCle
+     */
     public Cles(String idCle) {
         this.idCle = idCle;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getIdCle() {
         return idCle;
     }
 
+    /**
+     *
+     * @param idCle
+     */
     public void setIdCle(String idCle) {
         this.idCle = idCle;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getValCle() {
         return valCle;
     }
 
+    /**
+     *
+     * @param valCle
+     */
     public void setValCle(Integer valCle) {
         this.valCle = valCle;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLibCle() {
         return libCle;
     }
 
+    /**
+     *
+     * @param libCle
+     */
     public void setLibCle(String libCle) {
         this.libCle = libCle;
     }

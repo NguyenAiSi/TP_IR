@@ -32,6 +32,10 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Redige.findByPart", query = "SELECT r FROM Redige r WHERE r.part = :part")})
 public class Redige implements Serializable {
     private static final long serialVersionUID = 1L;
+
+    /**
+     *
+     */
     @EmbeddedId
     protected RedigePK redigePK;
     @Basic(optional = false)
@@ -45,50 +49,99 @@ public class Redige implements Serializable {
     @ManyToOne(optional = false)
     private Auteur auteur;
 
+    /**
+     *
+     */
     public Redige() {
     }
 
+    /**
+     *
+     * @param redigePK
+     */
     public Redige(RedigePK redigePK) {
         this.redigePK = redigePK;
     }
 
+    /**
+     *
+     * @param redigePK
+     * @param part
+     */
     public Redige(RedigePK redigePK, int part) {
         this.redigePK = redigePK;
         this.part = part;
     }
 
+    /**
+     *
+     * @param idArticle
+     * @param idAuteur
+     */
     public Redige(int idArticle, int idAuteur) {
         this.redigePK = new RedigePK(idArticle, idAuteur);
     }
 
+    /**
+     *
+     * @return
+     */
     public RedigePK getRedigePK() {
         return redigePK;
     }
 
+    /**
+     *
+     * @param redigePK
+     */
     public void setRedigePK(RedigePK redigePK) {
         this.redigePK = redigePK;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getPart() {
         return part;
     }
 
+    /**
+     *
+     * @param part
+     */
     public void setPart(int part) {
         this.part = part;
     }
 
+    /**
+     *
+     * @return
+     */
     public Article getArticle() {
         return article;
     }
 
+    /**
+     *
+     * @param article
+     */
     public void setArticle(Article article) {
         this.article = article;
     }
 
+    /**
+     *
+     * @return
+     */
     public Auteur getAuteur() {
         return auteur;
     }
 
+    /**
+     *
+     * @param auteur
+     */
     public void setAuteur(Auteur auteur) {
         this.auteur = auteur;
     }
